@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua/matyash/practice7"
+            xmlns:tns="http://nure.ua/matyash/practice7">
+
+<xsd:complexType name="Plane">
+<xsd:sequence>
+<xsd:element name="Model" type="xsd:string" />
+<xsd:element name="Originl" type="xsd:string"/>
+<xsd:element name = "Chars" type = "tns:Chars"></xsd:element>
+<xsd:element name = "Parametrs" type = "tns:Parametrs"></xsd:element>
+<xsd:element name = "Prise" type = "tns:Prise"></xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:element name="Planes">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name = "Plane" type ="tns:Plane" maxOccurs="unbounded" ></xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="Chars">
+<xsd:sequence>
+<xsd:element name = "Type" type ="tns:Type"  ></xsd:element>
+<xsd:element name = "Sits" type = "tns:Sits"></xsd:element>
+<xsd:element name="Ammunition" type="tns:Ammunition" minOccurs="0" />
+<xsd:element name = "Radar" type  = "xsd:boolean"></xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Parametrs">
+<xsd:sequence>
+<xsd:element name="lenght" type="xsd:int" />
+<xsd:element name="width" type="xsd:int" />
+<xsd:element name="height" type="xsd:int" />
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Prise">
+<xsd:attribute name = "convert" type="xsd:string"></xsd:attribute>
+<xsd:attribute  name = "value" type="xsd:int" ></xsd:attribute>
+</xsd:complexType>
+
+<xsd:simpleType name="Type">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Support" />
+<xsd:enumeration value="Fighter" />
+<xsd:enumeration value="Interceptor" />
+</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="Sits">
+<xsd:restriction base="xsd:integer">
+<xsd:minInclusive value="1" />
+<xsd:maxInclusive value="2" />
+</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="Ammunition">
+<xsd:sequence>
+<xsd:element name = "Rokets" type = "tns:Rokets"></xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="Rokets">
+<xsd:restriction base="xsd:integer">
+<xsd:minInclusive value="0" />
+<xsd:maxInclusive value="10" />
+</xsd:restriction>
+
+</xsd:simpleType>
+</xsd:schema>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="input.xsd">
+<Plane>
+<Model>RBM-1</Model>
+<Originl>UCR</Originl>
+<Chars>
+<Type>Fighter</Type>
+<Sits>2</Sits>
+<Ammunition>
+<Rokets>6</Rokets>
+</Ammunition>
+<Radar>true</Radar>
+</Chars>
+<Parametrs>
+<lenght>4</lenght>
+<width>3</width>
+<height>2</height>
+</Parametrs>
+<Prise convert="ua" value="4000"/>
+</Plane>
+<Plane>
+<Model>Mww-2</Model>
+<Originl>UCR</Originl>
+<Chars>
+<Type>Support</Type>
+<Sits>1</Sits>
+<Ammunition>
+<Rokets>0</Rokets>
+</Ammunition>
+<Radar>false</Radar>
+</Chars>
+<Parametrs>
+<lenght>6</lenght>
+<width>5</width>
+<height>4</height>
+</Parametrs>
+<Prise convert="ua" value="4332"/>
+</Plane>
+</Planes>
